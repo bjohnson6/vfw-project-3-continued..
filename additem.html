@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Bernice Johnson-->
+<!-- Project 1-->
+<!-- Visual Frameworks 12/06-->
+<html>
+    <head>
+    	 <!--Meta content gives the browser some information about our document. -->
+        <meta charset="utf-8" />
+        <meta name="description" content="My love tracker" />
+        <meta name="keywords" content ="app, relationship, moments, love, tracker" />
+        <!--Allows search engine robots to index our page in a search engine and 
+        follow (continue reading through) links on our page. -->
+        <meta name="robots" content="index, follow" />
+
+        <!--Conversely if you don't want to allow search engines access or follow links (private sites)...-->
+        <meta name="robots" content="noindex, nofollow" />
+        
+        <!-- Allows our content to size correctly to an iphone display -->
+        <!-- Viewport tells the browser to allow the user to scale the content and how wide it should assume the content will be displayed (i.e. a full 960px or the width of the divice)-->
+        <meta name="viewport" content="user-scalable=no, width=device-width" /> 
+        <title>My Love Tracker</title>
+
+       
+    </head>	
+    <body>
+
+
+
+    	<header> 
+           <h1> My Love Tracker</h1>
+        </header> 
+    <form>    <!--Field set and ledger -->
+      <fieldset>
+        <legend>Add A Moment:</legend>
+        Add An Event: <select>
+           <optgroup label="Choose Your Moment"> 
+           <option>First Met</option>
+         			            <option>First Date</option>
+         			            <option>First Kiss</option>
+         			            <option>First said I Love You!</option>
+         			            <option>Our Song</option>
+         		         <optgroup label="Choose Something Else">
+         			            <option>Our Names</option>
+         			            <option>Relationship Status</option>
+         			            <option>Calculate Time Together</option>
+         			            <option>Note A Special Moment</option>	                                  
+         		         </optgroup> 
+         	         </select> <br>		
+        Name: <input type="text" /><br />
+        <input type="hidden" name="Bernice" value="Me" />
+        When: <input type="text" /><br />
+        What: <input type="text" /><br />
+        Where: <input type="text" /><br />
+        Are your Z☯diac signs compatible? <br /><input type="radio" name="same" value="yes"/>yes <input type ="radio" name="same" value="no"/>no <br />
+        Rate My Lover: <input type ="range" id="quantity" min="1" max="10" /><br />
+        Start date: <input type="date" /><br />
+        End date: <input type="date" /><br />
+        Note:<textarea rows="3" cols="31"></textarea>   
+        
+      </fieldset>
+    </form>
+                    
+ 
+        <input type="submit" id="save" />
+          <ul>
+           <!--Clear Stored data and add Display Data -->
+              <li><a href="#">Clear Stored Data</a></li>
+              <li><a href="#">Display Data</a><li>
+          </ul>
+
+    </body>    
+</html>
+
