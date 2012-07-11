@@ -6,9 +6,14 @@ Visual Frameworks 12/06
 
 
 h1 {
-    margin: 10px 20px;
+    margin: 10px 10px 10px 10px;
     border-right: 1px solid #999;
     padding: 10px;
+    background: <img src="image/vfmbackground.png" />
+;
 
 
+}
+body {
+	background: #86005c;
 }

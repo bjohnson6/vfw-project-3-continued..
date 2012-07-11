@@ -19,7 +19,8 @@
         <!-- Viewport tells the browser to allow the user to scale the content and how wide it should assume the content will be displayed (i.e. a full 960px or the width of the divice)-->
         <meta name="viewport" content="user-scalable=no, width=device-width" /> 
         <title>My Love Tracker</title>
-        <link href="style.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <link rel="js" href="js/main.js" />
 
        
     </head>	
@@ -30,11 +31,12 @@
     	<header> 
            <h1> My Love Tracker</h1>
         </header> 
-    <form action="" method="post">    <!--Field set and ledger -->
+    <form action="" method="post" id="momentForm">    <!--Field set and ledger -->
       <fieldset>
           <legend>Add A Moment:</legend>
           <ul>
-              <li><label form "addevent">Add An Event:</label><select
+              <li><label form"addanevent">Add An Event:</label><select><br />
+              
               <optgroup label="Choose Your Moment"> 
               <option>First Met</option>
          			            <option>First Date</option>
@@ -49,6 +51,7 @@
          		         </optgroup> 
          	         </select> <br>	
             </ul>
+        </li>
             <ul>         	
                <li><label form"name">Name:</label><input type="text" /><br />
                
