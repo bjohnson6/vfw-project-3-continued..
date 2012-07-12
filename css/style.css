@@ -7,13 +7,80 @@ Visual Frameworks 12/06
 
 h1 {
     margin: 10px 10px 10px 10px;
-    border-right: 1px solid #999;
-    padding: 10px;
-    background: <img src="image/vfmbackground.png" />
-;
-
-
+    border-bottom-width: 2px solid #999; 
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, "MS Trebuchet", sans-serif;
+    text-align: center; 
+    background-color: transparent;
 }
+
 body {
-	background: #86005c;
+	background: #efefef;
+	 background: url(../image/vfwc.png);
+
 }
+
+p{
+	text-align: center;
+	font-size: 10;
+	color: #3c2e2b;
+	background-color: white;
+	padding: 8px;
+	border-style: dotted;
+	border color: #efefef;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+h2{
+	text-align:left;
+	color: #3c2e2b;
+	margin-left: 20px;
+	
+
+}
+
+
+fieldset{
+	color: #3c2e2b;
+	border-width: 3px;
+	font color: #d0d0d0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+
+
+}
+
+legend{
+	font-weight: bold;
+    color: #9b1d58;
+   
+}
+
+label{
+
+
+}
+
+
+
+li{
+
+
+}
+
+input {
+	background-color: #3c2e2b;
+}
+
+a{
+ color:#0d8f4a;
+ font-style: italic;
+ margin-left: 20px;
+
+}
+

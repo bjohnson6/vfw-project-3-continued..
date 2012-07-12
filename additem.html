@@ -20,7 +20,7 @@
         <meta name="viewport" content="user-scalable=no, width=device-width" /> 
         <title>My Love Tracker</title>
         <link href="css/style.css" rel="stylesheet" />
-        <link rel="js" href="js/main.js" />
+        
 
        
     </head>	
@@ -31,75 +31,70 @@
     	<header> 
            <h1> My Love Tracker</h1>
         </header> 
-    <form action="" method="post" id="momentForm">    <!--Field set and ledger -->
+    <form action="#" method="post" id="momentForm">    <!--Field set and ledger -->
       <fieldset>
-          <legend>Add A Moment:</legend>
+          <legend>Add A Moment</legend>
           <ul>
-              <li><label form"addanevent">Add An Event:</label><select><br />
+              <li><label for"addanevent">Add An Event:</label>
+              <select id="Add An Event">
               
               <optgroup label="Choose Your Moment"> 
-              <option>First Met</option>
-         			            <option>First Date</option>
-         			            <option>First Kiss</option>
-         			            <option>First said I Love You!</option>
-         			            <option>Our Song</option>
-         		         <optgroup label="Choose Something Else">
+                      <option>First Met</option>
+         			  <option>First Date</option>
+         			  <option>First Kiss</option>
+         			  <option>First said I Love You!</option>
+         			  <option>Our Song</option>
+         		          <optgroup label="Choose Something Else">
          			            <option>Our Names</option>
          			            <option>Relationship Status</option>
          			            <option>Calculate Time Together</option>
          			            <option>Note A Special Moment</option>	                                  
-         		         </optgroup> 
-         	         </select> <br>	
-            </ul>
-        </li>
-            <ul>         	
-               <li><label form"name">Name:</label><input type="text" /><br />
-               
-               <li><label form"when">When:</label><input type="text" /><br />
-               <li><label form"what">What:</label><input type="text" /><br />
-               <li><label form"where">Where:</label><input type="text" /><br />
-               <li><label form"me">Me:</label><input type="hidden" name="Bernice" value="Me" />
-               <li><label form"startd">Start date:</label><input type="date" /><br />
-               <li><label form"endd">End date:</label><input type="date" /><br />
-            </ul>  
-            <fieldset>
-                <legend>Fun Stuff</legend>
-                <ul>
-                    <li>Are your Z☯diac signs compatible?:</label><br />
-                        <ul>
-                            <li><label form"yes">Yes</label><input type="radio" name="same" value="yes"/ <br />
-                            <li><label form"no">No</label><input type ="radio" name="same" value="no"/ <br />
-                        </ul>
+         		          </optgroup> 
+         	  </select> 
+        
+             </li>
+                    	
+               <li><label for"name">Name:</label><input type="text" /><br />    
+               <li><label for"when">When:</label><input type="text" /><br />
+               <li><label for"what">What:</label><input type="text" /><br />
+               <li><label for"where">Where:</label><input type="text" /><br /> 
+               <li><label for"startd">Start date:</label><input type="date" /><br />
+               <li><label for"endd">End date:</label><input type="date" /><br />
+               <li><input"me" type="hidden" name="Bernice" value="Me" />
+            </ul> 
+      </fieldset>       
+      <fieldset>
+          <legend>Fun Stuff</legend>
+          <ul>
+              <li>Are your Z☯diac signs compatible?:</label><br />
+                  <ul>
+                      <li><label for"yes">Yes</label><input type="radio" name="same" value="yes"/ <br />
+                      <li><label for"no">No</label><input type ="radio" name="same" value="no"/ <br />
+                  </ul>
                     </li>
-                    <li>Rate My Lover: 
-                        <ul>           
-                            <li><label form"ratelover"</label><input type ="range" id="quantity" min="1" max="10" /<br />
-                        </ul>
-                    </li>
-                        
-                     <li>Add Notes:</label><br />
-                        <ul>
-                            <li><label form"note"</label><textarea rows="3" cols="31"></textarea> 
-                        </ul>        
-                    </li>            
-             </fieldset>                  
-               
-                
-                
-                        
-           </ul>      
+               <li>Rate My Lover: 
+                   <ul>           
+                       <li><label for"ratelover"</label><input type ="range" id="quantity" min="1" max="10" /<br />
+                   </ul>
+               </li>             
+               <li>Add Notes:</label><br />
+                    <ul>
+                        <li><label for"note"</label><textarea rows="3" cols="31"></textarea> 
+                    </ul>        
+                </li>            
+      </fieldset>                                
+         </ul>      
         
       </fieldset>
     </form>
         
-                    
- 
         <input type="submit" id="save" />
           <ul>
            <!--Clear Stored data and add Display Data -->
               <li><a href="#">Clear Stored Data</a></li>
               <li><a href="#">Display Data</a><li>
           </ul>
+          <script scr="js/main.js" type="text/javascript"></script>
 
     </body>    
 </html>
