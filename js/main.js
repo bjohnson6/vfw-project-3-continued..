@@ -9,12 +9,30 @@ window.addEventListener("DOMContentLoaded", function(){
 
 
 //getelementByID function
-
-
 function $(x){
     var theElement = document.getElementById(x);
     return theElement;              
 };
+
+
+//Create Select field element and populate with options.
+function makeOptions
+    var formTag = document.getElementsByTagName("form"),//formTag is an arrray of all the form tags.
+        selectLi = $("select"),
+        makeSelect = document.createElement("select");
+        makeSelect.setAttribute("id", "groups");
+    for(var i=0, j=addAnEvent.length; i<j; i++) {
+    	var makeOption = document.createElement("option");
+    	var optText = addAnEvent[i];
+    	makeOption.setAttribute("value", optText);
+    	makeOption.innerHTML = optText;
+    	makeSelect.appendChild(makeOption);
+
+    }  
+    selectLi.appendChild(makeSelect);
+
+
+}
 
 
 
@@ -33,7 +51,7 @@ var addAnEvent =[
    "Calculate Time Together",
    "Note A Special Moment"
 ]
-
+makeOptions();
 
 
 
