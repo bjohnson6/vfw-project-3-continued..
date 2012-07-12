@@ -4,6 +4,15 @@ Project 1
 Visual Frameworks 12/06
 */
 
+html{
+	background-color: #d6d6cf;
+	background-image:url(../image/vfwc.png);
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-position: x-% y-%/x-pos y-pos;
+	
+
+}
 
 h1 {
     margin: 10px 10px 10px 10px;
@@ -18,10 +27,12 @@ h1 {
 }
 
 body {
-	background: #efefef;
-	 background: url(../image/vfwc.png);
-	 
+	background-color: transparent;
+}
 
+form{
+	text-align:left
+	/*color:whilte;*/
 }
 
 p{  
