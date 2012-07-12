@@ -82,7 +82,7 @@ legend{
 }
 
 label{
-	/*display: inline;*/
+	display: inline;
 	float: left;  
 	font-family: ariel, sans-serif;
     color: #3c2e2b; 
@@ -92,22 +92,18 @@ label{
     text-align:right;
     font-weight: bold;
     text-indent: 6px;
-    
-    
-    
 }
 
-input{
-	display: inline;
 
-
-	margin-left: 3px;
+ul{
+	font-family: Arial,  sans-serif;
 	margin-bottom: 8px;
-	padding bottom: 10px;
-	
+	text-align: left;
+	font-weight: bold;
+	padding: 10px;
+	text-indent: 6px;
+	display: block;
 }
-
-
 
 
 li{
@@ -117,28 +113,24 @@ li{
 	text-align: left;
 	padding-top:0.2em;
 	margin-right:0.5em;
-	
 }
 
-ul{
-	font-family: Arial,  sans-serif;
-	margin-bottom: 8px;
-	text-align: left;
-	font-weight: bold;
-	padding: 10px;
-	text-indent: 6px;
-}
-
-input{
+input {
 	display: inline;
+
+
+	margin-left: 3px;
+	margin-bottom: 8px;
+	padding bottom: 10px;
 	
+}
+ul.class{
+	display: block;
 
 }
 
-	
 
 
-}
 
  input.submit{
 	margin-left: 21px;

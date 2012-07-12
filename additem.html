@@ -25,9 +25,6 @@
        
     </head>	
     <body>
-
-
-
     	<header> 
            <h1><id="test">My Love Tracker</h1>
         </header> 
@@ -35,12 +32,12 @@
              <a href="#" id="clear">Clear Stored Data</a>
              <a href="#"id="displayLink">Display Data</a>
         </nav>
-
-    <form action="#" method="post" id="momentForm">    <!--Field set and ledger -->
-      <fieldset>
+        <form action="#" method="post" id="momentForm">    <!--Field set and ledger -->
+             <fieldset id="MomentFieldset">
           <legend>Add A Moment</legend>
-          <ul>
-              <li><label for"addanevent">Add An Event:</label>
+          <ul id="Add An Event">
+
+              <li id="select"><label for="addanevent">Add An Event:</label><br /></li>
               <select id="Add An Event">
               
               <optgroup label="Choose Your Moment"> 
@@ -68,22 +65,24 @@
                <li><input"me" type="hidden" name="Bernice" value="Me" />
             </ul> 
       </fieldset>       
-      <fieldset>
+      <fieldset id="funStuff">
           <legend>Fun Stuff</legend>
           <ul>
-              <li>Are your Z☯diac signs compatible?:</label><br />
-                  <ul>
-                      <li><label for"yes">Yes</label><input type="radio" name="same" value="yes"/ <br />
-                      <li><label for"no">No</label><input type ="radio" name="same" value="no"/ <br />
+              <li><label for="zodiac">Are your Z☯diac signs compatible?:</label>
+                  <ul class="checkbox">
+                      <li><input type="radio" id="yes" value="yes" name="same":/><label for"yes">Yes</label></li> <!--<input type="radio" id="yes" name="same" value="yes"/label><li> -->
+                      <!-- <li><input for"no">No</label><input type ="radio" id="no" name="same" value="no"/ label><li>-->
+                      <li><input type="radio" id="no" value="no" name="same":/><label for"no">No</label></li>
                   </ul>
                     </li>
-               <li>Rate My Lover: 
-                   <ul>           
-                       <li><label for"ratelover"</label><input type ="range" id="quantity" min="1" max="10" /<br />
+               <li><label for="RateMyLover">Rate My Lover:</label>
+                   <ul class="range">           
+                       <!--<li><input for"ratelover"</label><input type="range" id="quantity" min="1" max="10"/label><li> -->
+                        <li><input type="range" id="quantity" value="quantity" min="1" max="10" name="range":/><label></li>
                    </ul>
                </li>             
-               <li>Add Notes:</label><br />
-                    <ul>
+               <li><label for="addnotes">Add Notes:</label><br />
+                    <ul class="textarea">
                         <li><label for"addnotes"</label><textarea rows="3" cols="31"></textarea> 
                     </ul>        
                 </li>  
