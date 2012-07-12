@@ -11,7 +11,8 @@ h1 {
     padding: 20px;
     color: white;
     font-weight: bold;
-    font-family: Arial, "MS Trebuchet", sans-serif;
+    font-family: Lane-Upper,ariel, sans-serif;
+
     text-align: center; 
     background-color: transparent;
 }
@@ -22,7 +23,8 @@ body {
 
 }
 
-p{
+p{  
+	font-family: Arial,  sans-serif;
 	text-align: center;
 	font-size: 10;
 	color: #3c2e2b;
@@ -35,6 +37,7 @@ p{
 }
 
 h2{
+	font-family: Arial, sans-serif;
 	text-align:left;
 	color: #3c2e2b;
 	margin-left: 20px;
@@ -44,9 +47,9 @@ h2{
 
 
 fieldset{
-	color: #3c2e2b;
-	border-width: 3px;
-	font color: #d0d0d0;
+	border-color: #3c2e2b;
+	border-width: 2px;
+	font color: #3c2e2b;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	margin-left: 15px;
@@ -56,16 +59,16 @@ fieldset{
 }
 
 legend{
+	font-family: Arial,  sans-serif;
 	font-weight: bold;
     color: #9b1d58;
    
 }
 
-label{
-
-
+legend.fieldset{
+	font-family: Arial,  sans-serif;
+	font color: #3c2e2b;
 }
-
 
 
 li{
@@ -73,8 +76,8 @@ li{
 
 }
 
-input {
-	background-color: #3c2e2b;
+input{
+	color: #3c2e2b;
 }
 
 a{
