@@ -29,8 +29,13 @@
 
 
     	<header> 
-           <h1> My Love Tracker</h1>
+           <h1><id="test">My Love Tracker</h1>
         </header> 
+        <nav>
+             <a href="#" id="clear">Clear Stored Data</a>
+             <a href="#"id="displayLink">Display Data</a>
+        </nav>
+
     <form action="#" method="post" id="momentForm">    <!--Field set and ledger -->
       <fieldset>
           <legend>Add A Moment</legend>
@@ -81,19 +86,15 @@
                     <ul>
                         <li><label for"addnotes"</label><textarea rows="3" cols="31"></textarea> 
                     </ul>        
-                </li>            
+                </li>  
+            </ul>              
       </fieldset>                                
-         </ul>      
+               
         
       </fieldset>
+      <input type="submit" value="Save Memory" id="submit" /><br />
     </form>
-        
-        <input type="submit" id="save" />
-          <ul>
-           <!--Clear Stored data and add Display Data -->
-              <li><a href="#">Clear Stored Data</a></li>
-              <li><a href="#">Display Data</a><li>
-          </ul>
+         
           <script scr="js/main.js" type="text/javascript"></script>
 
     </body>    
