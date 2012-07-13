@@ -31,6 +31,27 @@ function makeOptions
     }  
     selectLi.appendChild(makeSelect);
 
+}
+function storeData(){
+	var id           = Math.floor(Math.random()*100000001);
+	//gather up all form field values and store in an object.
+	//Object properties contain array with the form label and input value.
+	var item           ={};
+	    item.group     = ["Group:", $("groups").value];
+	    item.name      =["Name:", $("name").value];
+	    item.when      =["When:",$("when").value];
+	    item.what      =["What:",$("what").value];
+	    iten.where     =["Where:",$("where").value];
+	    item.startd    =["Start Date:",$("startd").value];
+	    item.endd      =["End Date:", $("endd").value];
+	    item.addnotes  =["Add Notes:",$("addnotes").value];
+	    item.zodiac    =["Zodiac:", zodiacValue];
+	    item.ratemylover     =["range:",$("range").value]; 
+	 //save data ito local storage: Use stringify to convert object to a string.
+	 localStorage.setItem(id. JSON.stringify(item));
+	 alert("Memory is Saved!");
+
+
 
 }
 
