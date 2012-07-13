@@ -33,13 +33,14 @@
              <a href="#"id="displayLink">Display Data</a>
         </nav>
         <form action="#" method="post" id="momentForm">    <!--Field set and ledger -->
-             <fieldset id="MomentFieldset">
+             <fieldset>
           <legend>Add A Moment</legend>
-          <ul id="Add An Event">
+         
+          <ul class="Add An Event">
 
               <li id="select"><label for="addanevent">Add An Event:</label><br /></li>
               <select id="Add An Event">
-              
+       
               <optgroup label="Choose Your Moment"> 
                       <option>First Met</option>
          			  <option>First Date</option>
@@ -55,6 +56,7 @@
          	  </select> 
         
              </li>
+             <ul class="list"
                     	
                <li><label for"name">Name:</label><input type="text" /><br />    
                <li><label for"when">When:</label><input type="text" /><br />
@@ -63,30 +65,46 @@
                <li><label for"startd">Start date:</label><input type="date" /><br />
                <li><label for"endd">End date:</label><input type="date" /><br />
                <li><input"me" type="hidden" name="Bernice" value="Me" />
-            </ul> 
-      </fieldset>       
-      <fieldset id="funStuff">
-          <legend>Fun Stuff</legend>
-          <ul>
-              <li><label for="zodiac">Are your Z☯diac signs compatible?:</label>
-                  <ul class="checkbox">
+               <li><label for"zodiac">Are your Z☯diac signs compatible?:</label>
+                    <ul class="checkbox">
+                         <li><input type="radio" id="yes" value="yes" name="same":/><label for"yes">Yes</label></li> <!--<input type="radio" id="yes" name="same" value="yes"/label><li> -->
+                      <!-- <li><input for"no">No</label><input type ="radio" id="no" name="same" value="no"/ label><li>-->
+                        <li><input type="radio" id="no" value="no" name="same":/><label for"no">No</label></li>
+                    </ul>
+
+                </li>
+                <li><label for"RateMyLover">Rate My Lover:</label>
+                    <ul class="range">           
+                       <!--li><input for"ratelover"</label><input type="range" id="quantity" min="1" max="10"/label><li> -->
+                        <li><input type="range" id="quantity" value="quantity" min="1" max="10" name="range":/><label></li>
+                      
+                    </ul>
+                 </li>   
+                    <li><label for"addnotes">Add Notes:</label><br />       
+                        <ul class="textarea">
+                        <li><label for"addnotes"</label><textarea rows="3" cols="31"></textarea></label></li>
+                   </ul>
+               </li>             
+                
+           
+     <!-- </fieldset> -->      
+     <!-- <fieldset id="">
+          <legend>Fun Stuff</legend> -->
+          <!--<ul> -->
+            
+              <!--<li><label for="zodiac">Are your Z☯diac signs compatible?:</label> -->
+                 <!-- <ul class="checkbox">
                       <li><input type="radio" id="yes" value="yes" name="same":/><label for"yes">Yes</label></li> <!--<input type="radio" id="yes" name="same" value="yes"/label><li> -->
                       <!-- <li><input for"no">No</label><input type ="radio" id="no" name="same" value="no"/ label><li>-->
-                      <li><input type="radio" id="no" value="no" name="same":/><label for"no">No</label></li>
+                 <!--     <li><input type="radio" id="no" value="no" name="same":/><label for"no">No</label></li>
                   </ul>
               </li>
                <li><label for="RateMyLover">Rate My Lover:</label>
                    <ul class="range">           
-                       <!--<li><input for"ratelover"</label><input type="range" id="quantity" min="1" max="10"/label><li> -->
-                        <li><input type="range" id="quantity" value="quantity" min="1" max="10" name="range":/><label></li>
-                   </ul>
-               </li>             
-               <li><label for="addnotes">Add Notes:</label><br />
-                    <ul class="textarea">
-                        <li><label for"addnotes"</label><textarea rows="3" cols="31"></textarea> 
-                    </ul>        
-                </li>  
-            </ul>              
+                       <!-<li><input for"ratelover"</label><input type="range" id="quantity" min="1" max="10"/label><li> -->
+                       <!-- <li><input type="range" id="quantity" value="quantity" min="1" max="10" name="range":/><label></li> -->
+                  
+                    
       </fieldset>                                
                
         

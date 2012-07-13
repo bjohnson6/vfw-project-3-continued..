@@ -69,10 +69,10 @@ fieldset{
 	*padding:lem;
 	font:80%/1 sans-serif;
 	border
-	
-
 
 }
+
+
 
 legend{
 	font-family: Arial,  sans-serif;
@@ -87,36 +87,41 @@ label{
 	font-family: ariel, sans-serif;
     color: #3c2e2b; 
     width:25%; 
-    margin-right:0.5em;
+   margin-right:0.5em;
     padding-top:0.2em;
     text-align:right;
     font-weight: bold;
-    text-indent: 6px;
+    /*text-indent: 2px;*/
 }
-
-
-ul{
+/*ul{
 	font-family: Arial,  sans-serif;
-	margin-bottom: 8px;
+	margin-bottom: 1px;
 	text-align: left;
 	font-weight: bold;
-	padding: 10px;
-	text-indent: 6px;
-	display: block;
-}
+	
+	}*/
 
 
 li{
 	display: block;
 	font-family: Arial, sans-serif;
     color: #3c2e2b;
-	text-align: left;
+	text-align: center;
 	padding-top:0.2em;
 	margin-right:0.5em;
 }
+input{
+	display:block;
+	
 
-input {
-	display: inline;
+
+    
+
+}
+
+/*ulinput {
+	display: block;
+
 
 
 	margin-left: 3px;
@@ -124,10 +129,10 @@ input {
 	padding bottom: 10px;
 	
 }
-ul.class{
+/*ulul.class{
 	display: block;
 
-}
+}*/
 
 
 

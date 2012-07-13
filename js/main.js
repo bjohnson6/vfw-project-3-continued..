@@ -107,6 +107,9 @@ function storeData(){
 
 function getData() {
 	toggleControls("on");
+	if(localStorage.length===0){
+		alert("There is no data in Local Storage.");
+	}
 	// Write Data from local storage
 	var makeDiv = document.createElement("div");
 	makeDiv.setAttribute("id", "items");
@@ -132,7 +135,18 @@ function getData() {
 	}
 }
 
+function clearLocal () {
+	if(localStorage.length === 0){
+		alert("There is no data to clear.")
+	}else{
+		localStorage.clear();
+		alert("All events are deleted");
+		window.location.reload();
+		return false;
+	}	
+	
 
+}
 
 
 //Variable defaults
