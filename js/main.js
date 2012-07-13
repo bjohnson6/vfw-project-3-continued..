@@ -4,7 +4,8 @@
 
 
 //wait until the dom is ready.
-window.addEventListener("DOMContentLoaded", function(){	   
+window.addEventListener("DOMContentLoaded", function(){	 
+	
 
 
 
@@ -50,7 +51,7 @@ function getSelectedRadio(){
 function toggleControls (n) {
 	switch(n){
 		case "on";
-		    s("contactForm").style.display ="none";
+		    s("momentForm").style.display ="none";
 		    s("clear").style.display = "inline";
 		    s("displayLink").style.display ="none";
 		    s("addNew").style.display= "inline";
