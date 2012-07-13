@@ -32,12 +32,40 @@ function makeOptions
     selectLi.appendChild(makeSelect);
 
 }
+
+//Finc value of selected radio button
+function getSelectedRadio(){
+	var radio = document.forms[0].same;
+	for(var i=0; i<radio.length; i++){
+		if(radio[i].checked){
+			zodiacValue = radio[i].value;
+
+		}
+		
+
+	}
+
+}
+//function getCheckboxValue(){
+//	if($("yes").checked){
+//		yesValue=
+ //   }else{
+ //       yesValue="No"
+ //   }
+//	}
+
+
+//}
+
+
+
 function storeData(){
 	var id           = Math.floor(Math.random()*100000001);
 	//gather up all form field values and store in an object.
 	//Object properties contain array with the form label and input value.
+	getSelectedRadio();
 	var item           ={};
-	    item.group     = ["Group:", $("groups").value];
+	    item.addanevent     = ["Add An Event:", $("addanevent").value];
 	    item.name      =["Name:", $("name").value];
 	    item.when      =["When:",$("when").value];
 	    item.what      =["What:",$("what").value];
@@ -46,7 +74,7 @@ function storeData(){
 	    item.endd      =["End Date:", $("endd").value];
 	    item.addnotes  =["Add Notes:",$("addnotes").value];
 	    item.zodiac    =["Zodiac:", zodiacValue];
-	    item.ratemylover     =["range:",$("range").value]; 
+	    item.ratemylover     =["Rate My Lover:",$("range").value]; 
 	 //save data ito local storage: Use stringify to convert object to a string.
 	 localStorage.setItem(id. JSON.stringify(item));
 	 alert("Memory is Saved!");
@@ -70,8 +98,10 @@ var addAnEvent =[
    "Our Names",
    "Relationship Status",
    "Calculate Time Together",
-   "Note A Special Moment"
+   "Note A Special Moment",
 ]
+   zodiacValue
+;  
 makeOptions();
 
 
