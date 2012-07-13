@@ -46,6 +46,28 @@ function getSelectedRadio(){
 	}
 
 }
+
+function toggleControls (n) {
+	switch(n){
+		case "on";
+		    s("contactForm").style.display ="none";
+		    s("clear").style.display = "inline";
+		    s("displayLink").style.display ="none";
+		    s("addNew").style.display= "inline";
+		    break;
+		case "off";
+		    s("momentForm").style.display ="block";
+		    s("clear").style.display = "inline";
+		    s("displayLink").style.display ="inline";
+		    s("addNew").style.display= "none";
+		    s("items").style.display = "none";
+		    break;   
+		 default;
+		    return false;    
+
+	}
+	// body...
+}
 //function getCheckboxValue(){
 //	if($("yes").checked){
 //		yesValue=
@@ -84,6 +106,7 @@ function storeData(){
 }
 
 function getData() {
+	toggleControls("on");
 	// Write Data from local storage
 	var makeDiv = document.createElement("div");
 	makeDiv.setAttribute("id", "items");
