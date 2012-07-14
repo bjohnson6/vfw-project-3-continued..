@@ -17,7 +17,7 @@ function $(x){
 
 
 //Create Select field element and populate with options.
-function makeOptions
+function addAnEvent(){
     var formTag = document.getElementsByTagName("form"),//formTag is an arrray of all the form tags.
         selectLi = $("select"),
         makeSelect = document.createElement("select");
@@ -36,7 +36,7 @@ function makeOptions
 
 //Finc value of selected radio button
 function getSelectedRadio(){
-	var radio = document.forms[0].same;
+	var radio = document.forms[0].zodiac;
 	for(var i=0; i<radio.length; i++){
 		if(radio[i].checked){
 			zodiacValue = radio[i].value;
@@ -88,7 +88,7 @@ function storeData(){
 	//Object properties contain array with the form label and input value.
 	getSelectedRadio();
 	var item                ={};
-	    item.addanevent     = ["Add An Event:", $("addanevent").value];
+	    item.addanevent     =["Add An Event:", $("addanevent").value];
 	    item.name           =["Name:", $("name").value];
 	    item.when           =["When:",$("when").value];
 	    item.what           =["What:",$("what").value];
@@ -96,8 +96,8 @@ function storeData(){
 	    item.startd         =["Start Date:",$("startd").value];
 	    item.endd           =["End Date:", $("endd").value];
 	    item.addnotes       =["Add Notes:",$("addnotes").value];
-	    item.zodiac         =["Are your Zodiac signs comapatible?:", zodiacValue];
-	    item.ratemylover    =["Rate My Lover:",$("range").value]; 
+	    item.zodiac         =["Are your Zodiac signs compatible?:", zodiacValue];
+	    item.range          =["Rate My Lover:",$("range").value]; 
 	 //save data ito local storage: Use stringify to convert object to a string.
 	 localStorage.setItem(id, JSON.stringify(item));
 	 alert("Memory is Saved!");
@@ -165,8 +165,10 @@ var addAnEvent =[
    "Note A Special Moment",
 ]
    zodiacValue
-;  
-makeOptions();
+;
+  
+momentForm();
+
 
 
 
