@@ -51,17 +51,17 @@ function getSelectedRadio(){
 function toggleControls (n) {
 	switch(n){
 		case "on":
-		    s("momentForm").style.display ="none";
-		    s("clear").style.display = "inline";
-		    s("displayLink").style.display ="none";
-		    s("addNew").style.display= "inline";
+		    $("momentForm").style.display ="none";
+		    $("clear").style.display = "inline";
+		    $("displayLink").style.display ="none";
+		    $("addNew").style.display= "inline";
 		    break;
 		case "off":
-		    s("momentForm").style.display ="block";
-		    s("clear").style.display = "inline";
-		    s("displayLink").style.display ="inline";
-		    s("addNew").style.display= "none";
-		    s("items").style.display = "none";
+		    $("momentform").style.display ="block";
+		    $("clear").style.display = "inline";
+		    $("displayLink").style.display ="inline";
+		    $("addNew").style.display= "none";
+		    $("items").style.display = "none";
 		    break;   
 		 default:
 		    return false;    
@@ -117,20 +117,21 @@ function getData() {
 	var makeList = document.createElement("ul");
 	makeDiv.appendChild(makeList);
 	document.body.appendChild(makeDiv);
+	$("items").style.display="block";
 	for(var i=0, len=localStorage.length; i<len; i++){
-		var makeli =document.createElement("li");
-		makeList.appendChild(makeli);
+		var makeLi =document.createElement("li");
+		makeList.appendChild(makeLi);
 		var key = localStorage.key(i);
 		var value = localStorage.getItem(key);
 		//convert to string from local storage value back to an object by using JSON.parse()
 		var obj = JSON.parse(value);
 		var makeSubList = document.createElement("ul");
-		makeli.appendChild(makeSubList);
+		makeLi.appendChild(makeSubList);
 		for(var n in obj){
-			var makeSublist = document.createElement("li");
-			makeSublist.appendChild(makeSubli);
+			var makeSubLi = document.createElement("li");
+			makeSubList.appendChild(makeSubLi);
 			var optSubText = obj [n] [0] + " "+obj[n][1];
-			makeSubli.innerHTML = optSubText;
+			makeSubLi.innerHTML = optSubText;
 
 		}
 	}
@@ -162,7 +163,7 @@ var addAnEvent =[
    "Our Names",
    "Relationship Status",
    "Calculate Time Together",
-   "Note A Special Moment",
+   "Note A Special Moment"
 ],
    zodiacValue
 ;
