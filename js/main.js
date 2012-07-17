@@ -17,11 +17,11 @@ function $(x){
 
 
 //Create Select field element and populate with options.
-function makeSelect(){
+function makeEvents(){
     var formTag = document.getElementsByTagName("form"),//formTag is an arrray of all the form tags.
         selectLi = $("select"),
         makeSelect = document.createElement("select");
-        makeSelect.setAttribute("id", "groups");
+        makeSelect.setAttribute("id", "events");
     for(var i=0, j=addAnEvent.length; i<j; i++) {
     	var makeOption = document.createElement("option");
     	var optText = addAnEvent[i];
@@ -88,7 +88,7 @@ function storeData(){
 	//Object properties contain array with the form label and input value.
 	getSelectedRadio();
 	var item                ={};
-	   // item.addanevent     =["Add An Event:", $("addanevent").value];
+	    item.event          =["Add An Event:", $("events").value];
 	    item.names          =["Name:", $("names").value];
 	    item.when           =["When:",$("when").value];
 	    item.what           =["What:",$("what").value];
@@ -109,7 +109,7 @@ function storeData(){
 function getData() {
 	toggleControls("on");
 	if(localStorage.length===0){
-		alert("There is no data in Local Storage.");
+		alert("There is no new Moments.");
 	}
 	// Write Data from local storage
 	var makeDiv = document.createElement("div");
@@ -168,7 +168,8 @@ var addAnEvent =[
    zodiacValue
 ;
   
-makeSelect();
+//makeSelect();
+makeEvents();
 
 
 
@@ -176,7 +177,7 @@ makeSelect();
 //Set Link and Submit click events
 var displayLink = $("displayLink");
 displayLink.addEventListener("click",getData);
-var clearLink=$("clear");
+var clearLink= $("clear");
 clearLink.addEventListener("click",clearLocal);
 var save = $("submit");
 save.addEventListener("click",storeData);
