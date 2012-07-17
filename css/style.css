@@ -17,7 +17,7 @@ html{
 h1 {
     margin: 10px 10px 10px 10px;
     border-bottom-width: 2px solid #999; 
-    padding: 20px;
+    padding: 18px;
     color: white;
     font-weight: bold;
     font-family: Lane-Upper,ariel, sans-serif;
@@ -60,19 +60,29 @@ h2{
 
 fieldset{
 	border: solid #3c2e2b;
-	border-width: .2em;
+	border-width: .1em;
 	/*font color: #3c2e2b;*/
 	margin-top: 25px;
-	margin-bottom: 15px;
-	margin-left: 10px;*/
-	margin-right: 20px;*/
-	*padding:lem;
+	margin-bottom: 10px;
+	/*margin-left: 10px;*/
+	/*margin-right: 20px;*/
+	/*padding:lem;*/
 	font:80%/1 sans-serif;
-	border
+	
 	border color: #3c2e2b;
-	margin: 20px;
-
+	/*margin: 20px; */
+	background-color: #e0e0da;
 }
+
+ul.zodiac{
+	margin-right: 40px;
+	
+}	
+	 
+	
+
+
+
 
 
 
@@ -91,10 +101,10 @@ label{
     color: #3c2e2b; 
     /*text-align:left;
     font-weight: bold;*/
-    width:100px; 
+    width:75px; 
     margin-right:0.5em;
     padding-top:0.2em;
-    text-align:right;
+    /*text-align:right; */
     font-weight: bold;
     
 }
@@ -119,12 +129,11 @@ input{
 	/*display:block;*/
 	text-align: justify;
 	
-
-
-    
-
 }
 
+ul.checkbox{
+	display: block;
+}
 /*ulinput {
 	display: block;
 
@@ -143,9 +152,9 @@ input{
 
 
 
- input.submit{
-	margin-left: 34px;
-	text-align: left/right/center/justify;
+ input#submit{
+	margin-left: 2px;
+
 
 }
 
@@ -153,8 +162,6 @@ input{
 a{
  color:#0d8f4a;
  font-style: italic;
- margin-left: 20px;
- text-align:center;
-
+ margin-left: 21px;
 }
 
