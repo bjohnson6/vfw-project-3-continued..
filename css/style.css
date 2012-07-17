@@ -85,16 +85,16 @@ legend{
 }
 
 label{
-	display: inline;
-	float: left;  
+	display: inline-block;
+	/*float: left;  */
 	font-family: ariel, sans-serif;
     color: #3c2e2b; 
-    text-align:left;
-    font-weight: bold;
-    width:12%; 
+    /*text-align:left;
+    font-weight: bold;*/
+    width:100px; 
     margin-right:0.5em;
     padding-top:0.2em;
-    text-align:left;
+    text-align:right;
     font-weight: bold;
     
 }
@@ -116,7 +116,7 @@ li{
 	margin-right:0.5em;
 }
 input{
-	display:block;
+	/*display:block;*/
 	text-align: justify;
 	
 

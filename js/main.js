@@ -17,7 +17,7 @@ function $(x){
 
 
 //Create Select field element and populate with options.
-function addAnEvent(){
+function makeSelect(){
     var formTag = document.getElementsByTagName("form"),//formTag is an arrray of all the form tags.
         selectLi = $("select"),
         makeSelect = document.createElement("select");
@@ -36,10 +36,10 @@ function addAnEvent(){
 
 //Finc value of selected radio button
 function getSelectedRadio(){
-	var radio = document.forms[0].zodiac;
-	for(var i=0; i<radio.length; i++){
-		if(radio[i].checked){
-			zodiacValue = radio[i].value;
+	var radios = document.forms[0].same;
+	for(var i=0; i<radios.length; i++){
+		if(radios[i].checked){
+			zodiacValue = radios[i].value;
 
 		}
 		
@@ -50,20 +50,20 @@ function getSelectedRadio(){
 
 function toggleControls (n) {
 	switch(n){
-		case "on";
+		case "on":
 		    s("momentForm").style.display ="none";
 		    s("clear").style.display = "inline";
 		    s("displayLink").style.display ="none";
 		    s("addNew").style.display= "inline";
 		    break;
-		case "off";
+		case "off":
 		    s("momentForm").style.display ="block";
 		    s("clear").style.display = "inline";
 		    s("displayLink").style.display ="inline";
 		    s("addNew").style.display= "none";
 		    s("items").style.display = "none";
 		    break;   
-		 default;
+		 default:
 		    return false;    
 
 	}
@@ -88,11 +88,11 @@ function storeData(){
 	//Object properties contain array with the form label and input value.
 	getSelectedRadio();
 	var item                ={};
-	    item.addanevent     =["Add An Event:", $("addanevent").value];
-	    item.name           =["Name:", $("name").value];
+	   // item.addanevent     =["Add An Event:", $("addanevent").value];
+	    item.names          =["Name:", $("names").value];
 	    item.when           =["When:",$("when").value];
 	    item.what           =["What:",$("what").value];
-	    iten.where          =["Where:",$("where").value];
+	    item.where          =["Where:",$("where").value];
 	    item.startd         =["Start Date:",$("startd").value];
 	    item.endd           =["End Date:", $("endd").value];
 	    item.addnotes       =["Add Notes:",$("addnotes").value];
@@ -163,11 +163,11 @@ var addAnEvent =[
    "Relationship Status",
    "Calculate Time Together",
    "Note A Special Moment",
-]
+],
    zodiacValue
 ;
   
-momentForm();
+makeSelect();
 
 
 
