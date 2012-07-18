@@ -57,7 +57,7 @@ function toggleControls (n) {
 		    $("addNew").style.display= "inline";
 		    break;
 		case "off":
-		    $("momentform").style.display ="block";
+		    $("momentForm").style.display ="block";
 		    $("clear").style.display = "inline";
 		    $("displayLink").style.display ="inline";
 		    $("addNew").style.display= "none";
@@ -88,7 +88,7 @@ function storeData(){
 	//Object properties contain array with the form label and input value.
 	getSelectedRadio();
 	var item                ={};
-	    item.event          =["Add An Event:", $("events").value];
+	    item.events          =["Add An Event:", $("events").value];
 	    item.names          =["Name:", $("names").value];
 	    item.when           =["When:",$("when").value];
 	    item.what           =["What:",$("what").value];
@@ -147,7 +147,7 @@ function makeItemLinks(key, linksLi){
     editLink.href ="#"; 
     editLink.key = key;	
     var editText = "Edit Moment";
-    //editLink.addEventListener("click", editItem);
+    editLink.addEventListener("click", editItem);
     editLink.innerHTML = editText;
     linksLi.appendChild(editLink);
     //add delete single items link
@@ -162,6 +162,34 @@ function makeItemLinks(key, linksLi){
     //add line break
     var breakTag = document.createElement("br");
     linksLi.appendChild(breakTag);
+}
+
+function editItem(){
+	//grab the data from our item from local storage.week 3
+	var value = localStorage.getItem(this.key);
+	var item = JSON.parse(value);
+    //show the form
+	toggleControls("off");
+
+	//populate the form field with the current localStorage values.week 3
+	$("events").value =item.events[1];
+	$("names").value =item.names[1];
+	$("when").value =item.when[1];
+	$("what").value =item.what[1];
+	$("where").value =item.where[1];
+	$("startd").value =item.startd[1];
+	$("endd").value  =item.endd[1];
+	$("addnotes").value =item.addnotes[1];
+	var radios = document.forms[0].same;
+	for(var i=0; i<radios.length; i++){
+		if(radios[i].value === "Yes" && item.same[1] == "Yes"){
+			radios[i].setAttribute("checked", "checked");
+		}else if(radios[i].value == "No" && item.same[1] == "No"){
+			radios[i].setAttribute("checked", "checked");
+		}
+	}
+	$("range").value =item.range[1];
+
 }
 
 function clearLocal () {
