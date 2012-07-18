@@ -82,8 +82,14 @@ function toggleControls (n) {
 
 
 
-function storeData(){
-	var id           = Math.floor(Math.random()*100000001);
+function storeData(key){
+	//if there is no key this is a brand new item.
+	if(!key){
+	    var id           = Math.floor(Math.random()*100000001);
+	}else{
+		//set the id to the existing key were editing so that it will save over the other data
+		id =key;
+	} 
 	//gather up all form field values and store in an object.
 	//Object properties contain array with the form label and input value.
 	getSelectedRadio();
@@ -242,8 +248,9 @@ function validate(e){
         e.preventDefault();
         return false;
     }else{
- 	   //if all is ok. save our data
- 	   storeData();
+ 	   //if all is ok. save our data..send the key value which came from the editdata function
+ 	   //remember this key value was passed through the edit submit listenner property
+ 	   storeData(this.key);
     }   
 }
 
