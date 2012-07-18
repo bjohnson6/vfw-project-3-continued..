@@ -161,7 +161,7 @@ function makeItemLinks(key, linksLi){
     deleteLink.href ="#";
     deleteLink.key = key;
     var deleteText = "Delete Moment";
-   // deleteLink.addEventListener("click", deleteItem);
+    deleteLink.addEventListener("click", deleteItem);
     deleteLink.innerHTML = deleteText;
     linksLi.appendChild(deleteLink);
 
@@ -206,6 +206,17 @@ function editItem(){
 	editSubmit.addEventListener("click", validate);
 	editSubmit.key = this.key;
 
+}
+
+function deleteItem(){
+	var ask = confirm("Are you sure you want to delete this moment?");
+	if(ask){
+        localStorage.removeItem(this.key);
+        alert("Moment was deleted!");
+        window.location.reload();
+	}else{
+        alert("Moment was NOT deleted.");
+	}
 }
 
 function clearLocal () {
