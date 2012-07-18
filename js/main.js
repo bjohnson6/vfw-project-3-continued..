@@ -190,6 +190,16 @@ function editItem(){
 	}
 	$("range").value =item.range[1];
 
+	//remove the intial listener from the input "save moment" button. week 3
+	save.removeEventListener("click", storeData);
+	//change submit button value to edit moment
+	$("submit").value ="Edit Moment";
+	var editSubmit = $("submit");
+	//save the key value established in this function as a property of the editSubmit event
+	//so we can use the value when we save the date we edited..
+	editSubmit.addEventListener("click", validate);
+	editSubmit.key = this.key;
+
 }
 
 function clearLocal () {
@@ -200,8 +210,11 @@ function clearLocal () {
 		alert("All events are deleted");
 		window.location.reload();
 		return false;
-	}	
-	
+	}
+
+}
+//week 3
+function validate(){
 
 }
 
