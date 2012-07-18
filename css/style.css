@@ -21,7 +21,7 @@ h1 {
     color: white;
     font-weight: bold;
     font-family: Lane-Upper,ariel, sans-serif;
-
+     font: 28px "Lane-Upper", "Ariel", Verdana, sans-serif;
     text-align: center; 
     background-color: transparent;
 }
@@ -75,7 +75,7 @@ fieldset{
 }
 
 ul.zodiac{
-	margin-right: 40px;
+	display: inline;
 	
 }	
 	 
@@ -95,13 +95,13 @@ legend{
 }
 
 label{
-	display: inline-block;
+	display: block;
 	/*float: left;  */
 	font-family: ariel, sans-serif;
     color: #3c2e2b; 
     /*text-align:left;
     font-weight: bold;*/
-    width:75px; 
+    /*width:75px; */
     margin-right:0.5em;
     padding-top:0.2em;
     /*text-align:right; */
@@ -123,16 +123,17 @@ li{
     color: #3c2e2b;
 	/*text-align: center*/
 	padding-top:0.2em;
-	margin-right:0.5em;
+	
 }
 input{
-	/*display:block;*/
-	text-align: justify;
+	display:block;
+	/*text-align: justify;*/
 	
 }
 
 ul.checkbox{
-	display: block;
+	margin-right: 20px;
+	
 }
 /*ulinput {
 	display: block;
@@ -154,8 +155,10 @@ ul.checkbox{
 
  input#submit{
 	margin-left: 2px;
+}
 
-
+nav{
+	text-align: center;
 }
 
 
@@ -163,5 +166,6 @@ a{
  color:#0d8f4a;
  font-style: italic;
  margin-left: 21px;
+ text-align: center;
 }
 
