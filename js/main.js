@@ -1,6 +1,6 @@
 //Bernice Johnson
-//Project 1
-// Visual Frameworks 12/06
+//Project 3
+// Visual Frameworks 12/07
 
 
 //wait until the dom is ready.
@@ -120,6 +120,7 @@ function getData() {
 	$("items").style.display="block";
 	for(var i=0, len=localStorage.length; i<len; i++){
 		var makeLi =document.createElement("li");
+		var linksLi = document.createElement("li"); //WEEK 3 ADD
 		makeList.appendChild(makeLi);
 		var key = localStorage.key(i);
 		var value = localStorage.getItem(key);
@@ -132,9 +133,35 @@ function getData() {
 			makeSubList.appendChild(makeSubLi);
 			var optSubText = obj [n] [0] + " "+obj[n][1];
 			makeSubLi.innerHTML = optSubText;
+			makeSubList.appendChild(linksLi);
 
 		}
+		makeItemLinks(localStorage.key(i), linksLi);//create our edit and delete buttons/link fr each item in local storage//WEEK 3 ADD
 	}
+}
+//week 3 add//Make Item Links
+//create the edit and delete links for each stored item when displayed.
+function makeItemLinks(key, linksLi){
+	//add edit single item link
+    var editLink = document.createElement("a");
+    editLink.href ="#"; 
+    editLink.key = key;	
+    var editText = "Edit Moment";
+    //editLink.addEventListener("click", editItem);
+    editLink.innerHTML = editText;
+    linksLi.appendChild(editLink);
+    //add delete single items link
+    var deleteLink = document.createElement("a");
+    deleteLink.href ="#";
+    deleteLink.key = key;
+    var deleteText = "Delete Moment";
+   // deleteLink.addEventListener("click", deleteItem);
+    deleteLink.innerHTML = deleteText;
+    linksLi.appendChild(deleteLink);
+
+    //add line break
+    var breakTag = document.createElement("br");
+    linksLi.appendChild(breakTag);
 }
 
 function clearLocal () {
