@@ -88,7 +88,7 @@ function storeData(){
 	//Object properties contain array with the form label and input value.
 	getSelectedRadio();
 	var item                ={};
-	    item.events          =["Add An Event:", $("events").value];
+	    item.events         =["Event:", $("events").value];
 	    item.names          =["Name:", $("names").value];
 	    item.when           =["When:",$("when").value];
 	    item.what           =["What:",$("what").value];
@@ -214,10 +214,38 @@ function clearLocal () {
 
 }
 //week 3
-function validate(){
+function validate(e){
+	//define elements we want to check
+	var getEvent = $("events");
 
+	//reset error messages
+	errMsg.innerHTML = " ";
+	    getEvent.style.border = "1px solid black";
+	
+
+	//get error message
+	var messageAry = [];
+	//event validation
+	if(getEvent.value === "--Choose Your Moment--"){
+		var eventError = "Please choose a moment.";
+		getEvent.style.border = "1px solid red";
+		messageAry.push(eventError);
+	}
+	//if there were errors, dislplay them on the screen
+	if(messageAry.length >= 1){
+		for(var i=0, j=messageAry.length; i < j; i++){
+			var txt = document.createElement("li");
+			txt.innerHTML = messageAry[i];
+			errMsg.appendChild(txt);
+		}
+	
+        e.preventDefault();
+        return false;
+    }else{
+ 	   //if all is ok. save our data
+ 	   storeData();
+    }   
 }
-
 
 //Variable defaults
 var addAnEvent =[
@@ -233,7 +261,9 @@ var addAnEvent =[
    "Calculate Time Together",
    "Note A Special Moment"
 ],
-   zodiacValue
+   zodiacValue,
+   errMsg = $("errors");
+
 ;
   
 //makeSelect();
@@ -248,7 +278,7 @@ displayLink.addEventListener("click",getData);
 var clearLink= $("clear");
 clearLink.addEventListener("click",clearLocal);
 var save = $("submit");
-save.addEventListener("click",storeData);
+save.addEventListener("click", validate);
 
 
 });
