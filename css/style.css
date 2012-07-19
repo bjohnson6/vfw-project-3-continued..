@@ -10,6 +10,7 @@ html{
 	background-repeat: no-repeat;
 	background-attachment:fixed;
 	background-position: x-% y-%/x-pos y-pos;
+	overflow: scroll;
 	
 
 }
@@ -74,11 +75,12 @@ fieldset{
 	background-color: #e0e0da;
 }
 
-ul.zodiac{
-	display: inline;
+
 	
-}	
-	 
+/*select#events{
+	background-color:  #a42661;
+
+} */
 	
 
 
@@ -99,13 +101,14 @@ label{
 	/*float: left;  */
 	font-family: ariel, sans-serif;
     color: #3c2e2b; 
+   
     /*text-align:left;
     font-weight: bold;*/
     /*width:75px; */
     margin-right:0.5em;
     padding-top:0.2em;
     /*text-align:right; */
-    font-weight: bold;
+    /*font-weight: bold; */
     
 }
 /*ul{
@@ -149,7 +152,10 @@ ul.checkbox{
 	display: block;
 
 }*/
-
+#errors{
+	
+color: red;
+}
 
 
 
@@ -160,15 +166,17 @@ ul.checkbox{
 nav{
 	
 	text-align: center;
+	font-family: Arial,  sans-serif;
 }
 
 
 a{
  color:#0d8f4a;
- font-style: italic;
+ font-family: Arial,  sans-serif;
  /*margin-left: 21px; */
  text-align: center;
  display: block;
+ font-style: italic;
 
 }
 

@@ -115,7 +115,7 @@ function storeData(key){
 
 function getData() {
 	toggleControls("on");
-	if(localStorage.length===0){
+	if(localStorage.length === 0){
 		alert("There is no new Moments.");
 	}
 	// Write Data from local storage
@@ -252,7 +252,7 @@ function validate(e){
 	}
 	//if there were errors, dislplay them on the screen
 	if(messageAry.length >= 1){
-		for(var i=0, j=messageAry.length; i < j; i++){
+		for(var i=0, j= messageAry.length; i < j; i++){
 			var txt = document.createElement("li");
 			txt.innerHTML = messageAry[i];
 			errMsg.appendChild(txt);
