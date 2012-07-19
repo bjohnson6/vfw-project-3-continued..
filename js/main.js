@@ -204,7 +204,7 @@ function editItem(){
 	$("submit").value ="Edit Moment";
 	var editSubmit = $("submit");
 	//save the key value established in this function as a property of the editSubmit event
-	//so we can use the value when we save the date we edited..
+	//so we can use that value when we save the date we edited..
 	editSubmit.addEventListener("click", validate);
 	editSubmit.key = this.key;
 
