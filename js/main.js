@@ -83,27 +83,28 @@ function toggleControls (n) {
 
 
 function storeData(key){
-	//if there is no key this is a brand new item.
+	//if there is no key this is a brand new item.we need a new key
 	if(!key){
 	    var id           = Math.floor(Math.random()*100000001);
 	}else{
 		//set the id to the existing key were editing so that it will save over the other data
+		//the key is the same key that has been passed along from the editsubmit evnt handler
 		id =key;
 	} 
 	//gather up all form field values and store in an object.
 	//Object properties contain array with the form label and input value.
 	getSelectedRadio();
 	var item                ={};
-	    item.events         =["Event:", $("events").value];
+	    item.event        =["Event:", $("events").value];
 	    item.names          =["Name:", $("names").value];
 	    item.when           =["When:",$("when").value];
 	    item.what           =["What:",$("what").value];
 	    item.where          =["Where:",$("where").value];
 	    item.startd         =["Start Date:",$("startd").value];
 	    item.endd           =["End Date:", $("endd").value];
-	    item.addnotes       =["Add Notes:",$("addnotes").value];
 	    item.zodiac         =["Are your Zodiac signs compatible?:", zodiacValue];
 	    item.range          =["Rate My Lover:",$("range").value]; 
+	    item.addnotes       =["Add Notes:",$("addnotes").value];
 	 //save data ito local storage: Use stringify to convert object to a string.
 	 localStorage.setItem(id, JSON.stringify(item));
 	 alert("Memory is Saved!");
@@ -131,13 +132,14 @@ function getData() {
 		var key = localStorage.key(i);
 		var value = localStorage.getItem(key);
 		//convert to string from local storage value back to an object by using JSON.parse()
+		//////////
 		var obj = JSON.parse(value);
 		var makeSubList = document.createElement("ul");
 		makeLi.appendChild(makeSubList);
-		for(var n in obj){
+		for(var n in obj){ //////////////////////////////
 			var makeSubLi = document.createElement("li");
 			makeSubList.appendChild(makeSubLi);
-			var optSubText = obj [n] [0] + " "+obj[n][1];
+			var optSubText = obj [n] [0] + " "+obj[n][1]; /////////
 			makeSubLi.innerHTML = optSubText;
 			makeSubList.appendChild(linksLi);
 
@@ -169,7 +171,7 @@ function makeItemLinks(key, linksLi){
     var breakTag = document.createElement("br");
     linksLi.appendChild(breakTag);
 }
-
+//edit Single Item
 function editItem(){
 	//grab the data from our item from local storage.week 3
 	var value = localStorage.getItem(this.key);
@@ -178,14 +180,13 @@ function editItem(){
 	toggleControls("off");
 
 	//populate the form field with the current localStorage values.week 3
-	$("events").value =item.events[1];
+	$("events").value =item.event[1];
 	$("names").value =item.names[1];
 	$("when").value =item.when[1];
 	$("what").value =item.what[1];
 	$("where").value =item.where[1];
 	$("startd").value =item.startd[1];
 	$("endd").value  =item.endd[1];
-	$("addnotes").value =item.addnotes[1];
 	var radios = document.forms[0].same;
 	for(var i=0; i<radios.length; i++){
 		if(radios[i].value === "Yes" && item.same[1] == "Yes"){
@@ -195,6 +196,7 @@ function editItem(){
 		}
 	}
 	$("range").value =item.range[1];
+	$("addnotes").value =item.addnotes[1];
 
 	//remove the intial listener from the input "save moment" button. week 3
 	save.removeEventListener("click", storeData);
@@ -215,7 +217,7 @@ function deleteItem(){
         alert("Moment was deleted!");
         window.location.reload();
 	}else{
-        alert("Moment was NOT deleted.");
+        alert("Moment was NOT deleted.")
 	}
 }
 
@@ -224,7 +226,7 @@ function clearLocal () {
 		alert("There is no data to clear.")
 	}else{
 		localStorage.clear();
-		alert("All events are deleted");
+		alert("All events are deleted")
 		window.location.reload();
 		return false;
 	}
@@ -259,8 +261,8 @@ function validate(e){
         e.preventDefault();
         return false;
     }else{
- 	   //if all is ok. save our data..send the key value which came from the editdata function
- 	   //remember this key value was passed through the edit submit listenner property
+ 	   //if all is ok. save our data..send the key value (which came from the editdata function)
+ 	   //remember this key value was passed through the editsubmit listner property
  	   storeData(this.key);
     }   
 }
