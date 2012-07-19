@@ -152,14 +152,19 @@ ul.checkbox{
 	display: block;
 
 }*/
-#errors{
-	
-color: red;
+#errors li{
+
+font-weight:  bold;
+
+color:  red;
+
+
+
 }
 
 
 
- input#submit{
+input#submit{
 	margin-left: 2px;
 }
 
