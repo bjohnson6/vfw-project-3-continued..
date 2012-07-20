@@ -157,11 +157,10 @@ ul.checkbox{
 font-weight:  bold;
 
 color:  red;
-
-
-
 }
-
+ul.checkbox li{
+	display: block;
+}
 
 
 input#submit{

@@ -189,7 +189,7 @@ function editItem(){
 	$("endd").value  =item.endd[1];
 	var radios = document.forms[0].same;
 	for(var i=0; i<radios.length; i++){
-		if(radios[i].value === "Yes" && item.same[1] == "Yes"){
+		if(radios[i].value == "Yes" && item.same[1] == "Yes"){
 			radios[i].setAttribute("checked", "checked");
 		}else if(radios[i].value == "No" && item.same[1] == "No"){
 			radios[i].setAttribute("checked", "checked");
@@ -199,7 +199,7 @@ function editItem(){
 	$("addnotes").value =item.addnotes[1];
 
 	//remove the intial listener from the input "save moment" button. week 3
-	save.removeEventListener("click", storeData);
+	save.removeEventListener("click", storeData); /////check storeData////////////////////
 	//change submit button value to edit moment
 	$("submit").value ="Edit Moment";
 	var editSubmit = $("submit");
